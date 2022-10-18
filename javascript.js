@@ -1,17 +1,18 @@
-
 const selection = ["rock", "paper", "scissors"];
+
+let playerScore = 0;
+
+let computerScore = 0;
+
 
 function computerChoice () {
     const random = Math.floor(Math.random() * selection.length);
     return (selection[random]);
 }
 
-let computerSelection = computerChoice();
-
-let playerSelction = prompt('What do you choose?').toLowerCase();
-
 function playRound(player, computer) {
 
+    
 
     if(player == computer){
         console.log(computer);
@@ -53,4 +54,16 @@ function playRound(player, computer) {
 
  }
 
-playRound(playerSelction, computerSelection);
+
+function game () { 
+    for (let i = 0; i < 5; i++) {
+    let computerSelection = computerChoice();
+    let playerSelction = prompt('What do you choose?').toLowerCase();
+    playRound(playerSelction, computerSelection);
+    
+    }
+
+
+}
+
+game ();
