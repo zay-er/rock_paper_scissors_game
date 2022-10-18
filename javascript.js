@@ -11,7 +11,7 @@ function computerChoice () {
 
 function playRound(player, computer) {
     if(player == computer){
-        console.log(computer);
+        console.log(`Computer also chose ${computer}`);
         console.log ('It is a tie!');
     }
 
@@ -62,7 +62,15 @@ function game () {
     }
 
     if(playerScore > computerScore){
-        console.log
+        console.log("player wins!")
+    }
+    
+    else if(computerScore > playerScore){
+        console.log("Computer wins!")
+    }
+
+    else {
+        console.log("It's a tie!")
     }
 }
 
